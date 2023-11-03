@@ -1,0 +1,3 @@
+* Hetris
+
+A very simple Tetris clone. Made in Haskell to dive into the language a bit.

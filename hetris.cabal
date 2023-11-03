@@ -1,0 +1,62 @@
+cabal-version: 2.2
+
+-- This file has been generated from package.yaml by hpack version 0.35.2.
+--
+-- see: https://github.com/sol/hpack
+
+name:           hetris
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/hetris#readme>
+homepage:       https://github.com/mateodif/hetris#readme
+bug-reports:    https://github.com/mateodif/hetris/issues
+author:         Mateo Difranco
+maintainer:     mateodifr@gmail.com
+copyright:      2023 Mateo Difranco
+license:        BSD-3-Clause
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+
+source-repository head
+  type: git
+  location: https://github.com/mateodif/hetris
+
+library
+  other-modules:
+      Paths_hetris
+  autogen-modules:
+      Paths_hetris
+  hs-source-dirs:
+      src
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
+  build-depends:
+      base >=4.7 && <5
+    , lens >=5.2.3
+    , linear >=1.22
+    , mtl >=2.2.1
+    , random >=1.2.1.1
+    , sdl2 >=2.5.5.0
+  default-language: Haskell2010
+
+executable hetris-exe
+  main-is: Main.hs
+  other-modules:
+      Color
+      State
+      Tetromino
+      Paths_hetris
+  autogen-modules:
+      Paths_hetris
+  hs-source-dirs:
+      app
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , hetris
+    , lens >=5.2.3
+    , linear >=1.22
+    , mtl >=2.2.1
+    , random >=1.2.1.1
+    , sdl2 >=2.5.5.0
+  default-language: Haskell2010
